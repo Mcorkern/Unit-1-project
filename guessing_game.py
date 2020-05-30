@@ -34,7 +34,7 @@ def start_game():
                     continue
     
     print("Amazing it took you {} guesses to get it right! The high score is...".format(num_of_guesses))
-    
+    ### still trying to figure out how to store and show the high score 
     while True:
         print("Would you like to play again? Yes/No  ")
         play_again = input("")

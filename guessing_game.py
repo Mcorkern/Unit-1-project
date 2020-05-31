@@ -2,18 +2,24 @@
 current_high_score = 10
 
 def get_high_score():
+
     global current_high_score
+    
     if num_of_guesses < current_high_score:
         current_high_score = num_of_guesses
         print("Amazing it took you {} guesses to get it right! The high score is {}".format(num_of_guesses, current_high_score))
+        
     elif num_of_guesses > current_high_score: 
         print("Amazing it took you {} guesses to get it right! The high score is {}".format(num_of_guesses, current_high_score))
+        
     return current_high_score
         
 def play_again():
+
     play_again = True
+    
     while play_again:
-            
+                
         print("Would you like to play again? Yes/No  ")
         play_again = input("") 
             
@@ -40,6 +46,7 @@ def start_game():
         try:
             number = int(input("Enter a number between 1 and 10.  "))
             num_of_guesses += 1
+            
         except ValueError:
             print("Thats not a number try again!")
         

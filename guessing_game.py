@@ -15,7 +15,6 @@ def get_high_score():
     return current_high_score
         
 def play_again():
-
     play_again = True
     
     while play_again:

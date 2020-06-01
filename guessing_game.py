@@ -12,7 +12,7 @@ def get_high_score():
     elif num_of_guesses > current_high_score: 
         print("Awesome it took you {} guesses to get it right! But the high score is {}. Maybe next time you can beat it.".format(num_of_guesses, current_high_score))
     elif current_high_score == 1 and num_of_guesses == current_high_score:
-        print("You nailed it and got it in 1 try! ")  
+        print("You nailed it and got it in 1 try! You have the best high score possiple at {} attempt! ". format(current_high_score))  
     else:
         print("Nice it took you {} guesses to get it right this time but the high score is {}. Can you beat that? Let's find out!".format(num_of_guesses, current_high_score))        
     return current_high_score

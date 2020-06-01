@@ -4,17 +4,23 @@
 current_high_score = 10
 def get_high_score():
     global current_high_score
+    
     if num_of_guesses < current_high_score:
         current_high_score = num_of_guesses
-        print("Amazing it took you {} guesses to get it right! The high score is {}".format(num_of_guesses, current_high_score))
+        print("Amazing it took you {} guesses to get it right! The new high score is {}!".format(num_of_guesses, current_high_score))
         
     elif num_of_guesses > current_high_score: 
-        print("Amazing it took you {} guesses to get it right! The high score is {}".format(num_of_guesses, current_high_score))
+        print("Awesome it took you {} guesses to get it right! But the high score is {}. Maybe next time you can beat it.".format(num_of_guesses, current_high_score))
+    elif current_high_score == 1 and num_of_guesses == current_high_score:
+        print("You nailed it and got it in 1 try! ")  
+    else:
+        print("Nice it took you {} guesses to get it right this time but the high score is {}. Can you beat that? Let's find out!".format(num_of_guesses, current_high_score))        
     return current_high_score
         
 def play_again():
     play_again = True
     while play_again:
+                
         print("Would you like to play again? Yes/No  ")
         play_again = input("") 
             
@@ -27,6 +33,7 @@ def play_again():
             continue
 
 def start_game():
+    
     global num_of_guesses 
     num_of_guesses = 0
     import random
@@ -63,6 +70,10 @@ def start_game():
                 continue
     
             
+    
+    
+
+
 start_game()
 play_again()
 
